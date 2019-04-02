@@ -19,3 +19,9 @@ Registering user1
 
 Registering user2
 "sipp -sf client.xml -inf reg_dataclient2.csv -m 1 -l 1 -trace_msg  -trace_err phone.plivo.com -log_file reg.log -log_overwrite true -message_file msgfile -p 7000" 
+
+B. For call scennario 
+1. Run server at 700 port 
+"sipp -sn uas -d 0 -i local_ip -p 7000 -trace_msg"
+2. Run client with modfied uac.xml as attached 
+"sipp -sf uac.xml -inf reg_dataclient1.csv -m 1 -l 1 -trace_msg -trace_err phone.plivo.com -log_file reg.log -log_overwrite true -message_file msgfileclient  -p 6000"
